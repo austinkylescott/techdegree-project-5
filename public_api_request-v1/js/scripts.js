@@ -3,7 +3,6 @@
  ********************/
 const numUsers = 12;
 const gallery = document.querySelector('#gallery');
-let cards = document.querySelectorAll('.card');
 let users = [];
 /********************
  *   Fetch Methods  *
@@ -23,6 +22,7 @@ fetchUsers();
  *  Event Listeners *
  ********************/
 function setCardListeners() {
+	const cards = document.querySelectorAll('.card');
 	cards.forEach((card) => {
 		card.addEventListener('click', function(event) {
 			displayModal(card);
@@ -60,7 +60,6 @@ function displayGallery(users) {
 	});
 
 	gallery.innerHTML = galleryHTML;
-	cards = document.querySelectorAll('.card');
 	setCardListeners();
 }
 
